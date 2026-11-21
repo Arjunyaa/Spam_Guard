@@ -1,0 +1,297 @@
+====================================================================
+SPAMGUARD AI - ALL COMMANDS REFERENCE
+====================================================================
+
+PROJECT LOCATION:
+C:\Users\aarju\Downloads\ML Project
+
+====================================================================
+SETUP COMMANDS (First Time Only)
+====================================================================
+
+1. Navigate to project:
+   cd "C:\Users\aarju\Downloads\ML Project"
+
+2. Create virtual environment:
+   python -m venv venv
+
+3. Activate virtual environment:
+   venv\Scripts\activate
+
+4. Upgrade pip:
+   pip install --upgrade pip
+
+5. Install dependencies:
+   pip install -r requirements.txt
+
+6. Train URL model:
+   python training\train_url_model.py
+
+7. (Optional) Train message model:
+   python training\train_message_model.py
+
+====================================================================
+RUN APPLICATION
+====================================================================
+
+Manual:
+   cd "C:\Users\aarju\Downloads\ML Project"
+   venv\Scripts\activate
+   streamlit run app.py
+
+Automated:
+   Double-click START_APP.bat
+
+With different port:
+   streamlit run app.py --server.port 8502
+
+====================================================================
+TESTING COMMANDS
+====================================================================
+
+Run all tests:
+   python tests\run_all_tests.py
+
+Individual test suites:
+   python tests\test_message_detection.py
+   python tests\test_url_analyzer.py
+   python tests\test_database.py
+
+====================================================================
+TRAINING COMMANDS
+====================================================================
+
+Train message model:
+   python training\train_message_model.py
+
+Train URL model:
+   python training\train_url_model.py
+
+====================================================================
+VERIFICATION COMMANDS
+====================================================================
+
+Check Python version:
+   python --version
+
+Check installed packages:
+   pip list
+
+Check if virtual environment is active:
+   Look for (venv) in command prompt
+
+Check Streamlit version:
+   streamlit version
+
+Test imports:
+   python -c "import streamlit, pandas, sklearn, plotly"
+
+====================================================================
+TROUBLESHOOTING COMMANDS
+====================================================================
+
+If port busy, check processes:
+   netstat -ano | findstr :8501
+
+Kill process (replace PID):
+   taskkill /PID <PID> /F
+
+Reinstall dependencies:
+   pip install --force-reinstall -r requirements.txt
+
+Update scikit-learn:
+   pip install --upgrade scikit-learn
+
+Clear Python cache:
+   del /s /q *.pyc
+   for /d /r %i in (__pycache__) do @rmdir /s /q "%i"
+
+====================================================================
+DATABASE COMMANDS
+====================================================================
+
+View database (SQLite):
+   sqlite3 detection_history.db
+   .tables
+   SELECT * FROM detections LIMIT 10;
+   .exit
+
+Backup database:
+   copy detection_history.db detection_history_backup.db
+
+Delete database:
+   del detection_history.db
+
+====================================================================
+GIT COMMANDS (If Using Version Control)
+====================================================================
+
+Initialize:
+   git init
+
+Add files:
+   git add .
+
+Commit:
+   git commit -m "Initial commit"
+
+Create .gitignore:
+   echo venv/ > .gitignore
+   echo __pycache__/ >> .gitignore
+   echo *.pyc >> .gitignore
+   echo detection_history.db >> .gitignore
+
+====================================================================
+PROJECT MANAGEMENT COMMANDS
+====================================================================
+
+Count lines of Python code:
+   dir /s /b *.py | find /c ".py"
+
+Find specific text in files:
+   findstr /s /i "LinearSVC" *.py
+
+List all Python files:
+   dir /s /b *.py
+
+Create requirements file (if needed):
+   pip freeze > requirements.txt
+
+====================================================================
+STREAMLIT-SPECIFIC COMMANDS
+====================================================================
+
+Run with config:
+   streamlit run app.py --server.port 8501 --server.headless false
+
+Clear cache:
+   streamlit cache clear
+
+View config:
+   streamlit config show
+
+====================================================================
+PYTHON COMMANDS FOR TESTING
+====================================================================
+
+Test specific function:
+   python -c "from utils.message_detection import MessageDetector; d = MessageDetector(); print(d.predict('test'))"
+
+Check model exists:
+   dir models\*.pkl
+
+Test URL analyzer:
+   python -c "from utils.url_analyzer import analyze_url; print(analyze_url('http://example.com'))"
+
+====================================================================
+BATCH FILE COMMANDS
+====================================================================
+
+Run setup:
+   SETUP.bat
+
+Start application:
+   START_APP.bat
+
+====================================================================
+USEFUL SHORTCUTS
+====================================================================
+
+Activate venv + Run app:
+   venv\Scripts\activate && streamlit run app.py
+
+Run tests + Start app:
+   python tests\run_all_tests.py && streamlit run app.py
+
+Full setup in one command:
+   python -m venv venv && venv\Scripts\activate && pip install -r requirements.txt && python training\train_url_model.py
+
+====================================================================
+DEACTIVATE ENVIRONMENT
+====================================================================
+
+Deactivate virtual environment:
+   deactivate
+
+====================================================================
+UNINSTALL (If Needed)
+====================================================================
+
+Remove virtual environment:
+   rmdir /s /q venv
+
+Remove Python cache:
+   rmdir /s /q __pycache__
+   del /s /q *.pyc
+
+Remove database:
+   del detection_history.db
+
+Remove all (keep source code):
+   rmdir /s /q venv
+   del detection_history.db
+   for /d /r %i in (__pycache__) do @rmdir /s /q "%i"
+
+====================================================================
+MACOS/LINUX EQUIVALENT COMMANDS
+====================================================================
+
+Activate virtual environment:
+   source venv/bin/activate
+
+Navigate:
+   cd ~/Downloads/ML\ Project/
+
+Run Python:
+   python3 instead of python
+   pip3 instead of pip
+
+====================================================================
+EMERGENCY COMMANDS (If Something Breaks)
+====================================================================
+
+Nuclear reset:
+   1. Close all terminals
+   2. Delete venv folder
+   3. Run SETUP.bat again
+
+Quick fix:
+   venv\Scripts\activate
+   pip install --force-reinstall streamlit
+
+Verify installation:
+   pip list | findstr streamlit
+   pip list | findstr scikit-learn
+
+====================================================================
+PERFORMANCE MONITORING
+====================================================================
+
+Check memory usage:
+   tasklist | findstr python
+
+Monitor CPU:
+   wmic cpu get loadpercentage
+
+====================================================================
+NOTES:
+====================================================================
+
+• Always activate virtual environment before running commands
+• Look for (venv) in command prompt
+• Default Streamlit port: 8501
+• Ctrl+C to stop Streamlit
+• Database created automatically on first use
+• Models must be trained before first run (URL model)
+
+====================================================================
+QUICK START (Copy-Paste):
+====================================================================
+
+cd "C:\Users\aarju\Downloads\ML Project"
+venv\Scripts\activate
+streamlit run app.py
+
+====================================================================
+END OF COMMANDS REFERENCE
+====================================================================

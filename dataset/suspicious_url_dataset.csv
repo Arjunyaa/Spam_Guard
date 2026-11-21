@@ -1,0 +1,61 @@
+url,label,category,reason
+https://www.example.com/account/login,benign,ordinary,HTTPS on a familiar reserved example domain; no obvious lure
+https://shop.example.org/products/blue-shirt,benign,shopping,Product page path without urgency or reward language
+https://mail.example.net/inbox,benign,email,Ordinary inbox path
+https://support.example.com/help/password-reset,benign,support,Password help path on a reserved example domain
+https://www.example.com/contact,benign,ordinary,Ordinary contact page
+https://news.example.org/latest,benign,news,Ordinary news page
+https://docs.example.net/guides/setup,benign,documentation,Documentation path
+https://portal.example.com/student/dashboard,benign,portal,Ordinary student portal path
+https://payments.example.org/receipt/12345,benign,payments,Receipt path without credential request
+https://store.example.net/orders/track,benign,shopping,Order tracking path on reserved example domain
+https://calendar.example.com/events,benign,productivity,Ordinary calendar page
+https://www.example.org/about-us,benign,ordinary,Ordinary about page
+https://accounts.example.net/security/settings,benign,account,Settings path without threat or urgency
+https://library.example.com/search?q=python,benign,education,Search page with normal query
+https://university.example.edu/admissions,benign,education,University admissions page on reserved example domain
+https://bank.example.com/help/branches,benign,banking,Informational branch help page
+https://health.example.org/appointments,benign,health,Appointment page without suspicious wording
+https://community.example.net/forum/topic/42,benign,community,Ordinary forum topic
+https://status.example.com/uptime,benign,status,Service status page
+https://api.example.org/v1/docs,benign,documentation,API documentation path
+http://intranet.example.local/home,benign,intranet,Private intranet-style hostname; not automatically malicious
+https://example.com:443/,benign,ordinary,HTTPS using its standard port
+https://www.example.com/search?query=weather,benign,ordinary,Normal search query
+https://blog.example.org/posts/python-basics,benign,blog,Ordinary blog article
+https://forms.example.net/feedback,benign,forms,Feedback form path
+https://www.example.com/legal/privacy,benign,ordinary,Privacy policy page
+https://cdn.example.org/assets/logo.png,benign,cdn,Static image asset on reserved example domain
+https://downloads.example.net/manual.pdf,benign,downloads,Manual download path
+https://events.example.com/register,benign,events,Event registration path without urgency
+https://maps.example.org/places,benign,maps,Ordinary map page
+http://claim-free-prize.example,suspicious,prize_lure,Prize claim language and HTTP
+http://verify-account-now.example/login,suspicious,credential_phishing,Urgent account verification and login path
+https://secure-bank-login.example/confirm,suspicious,brand_impersonation,Bank login wording on an unrelated reserved domain
+http://bit.ly.example/urgent,suspicious,shortener_like,Shortener-like hostname plus urgency
+http://free-gift-card.example/claim,suspicious,prize_lure,Free gift card claim lure
+https://account-suspended.example/restore,suspicious,threat_lure,Account suspension threat
+http://password-reset-immediately.example,suspicious,credential_phishing,Immediate password reset wording
+https://paypal-security-check.example/signin,suspicious,brand_impersonation,Payment brand name embedded in unrelated domain
+http://delivery-fee-required.example/pay,suspicious,payment_lure,Unexpected delivery fee payment request
+https://tax-refund-claim.example/submit,suspicious,payment_lure,Refund claim lure
+http://winner-congratulations.example/prize,suspicious,prize_lure,Winner and prize language
+https://update-your-bank-details.example/secure,suspicious,credential_phishing,Requests bank details
+http://login.microsoft.example.verify-user.example,suspicious,lookalike_host,Trusted brand appears in a misleading hostname
+https://appleid.account-check.example/verify,suspicious,brand_impersonation,Brand-like account verification lure
+http://tinyurl.example/abc123,suspicious,shortener_like,Shortener-like hostname; destination is obscured by pattern
+https://bitly.example/free-voucher,suspicious,shortener_like,Shortener-like hostname with voucher lure
+http://xn--paypa1-9za.example/login,suspicious,homograph_like,Punycode-style hostname that warrants review
+https://185.199.110.153.example/secure-login,suspicious,ip_like_host,IP-like host pattern and login lure
+http://gift.example@evil.example/login,suspicious,userinfo_trick,User-info syntax can mislead readers about the actual host
+https://secure-update.example:8080/account,suspicious,unusual_port,Non-standard port combined with account update lure
+http://urgent-kyc-update.example/submit,suspicious,credential_phishing,Urgent KYC update request
+https://claim-your-cash-bonus.example,suspicious,prize_lure,Cash bonus claim lure
+http://free-mobile-recharge.example/redeem,suspicious,prize_lure,Free recharge redemption lure
+https://wallet-verification.example/connect,suspicious,credential_phishing,Wallet verification request
+http://security-alert-action-required.example,suspicious,threat_lure,Security alert with action-required pressure
+https://invoice-overdue-pay-now.example/pay,suspicious,payment_lure,Urgent payment request
+http://track-parcel-customs-fee.example/fee,suspicious,payment_lure,Unexpected parcel customs fee
+https://whatsapp-gift-offer.example/activate,suspicious,brand_impersonation,Messaging brand plus gift activation lure
+http://instagram-blue-check-free.example/claim,suspicious,brand_impersonation,Social media verification giveaway lure
+https://banking-session-expired.example/relogin,suspicious,credential_phishing,Expired banking session relogin lure
